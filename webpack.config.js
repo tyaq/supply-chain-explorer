@@ -16,8 +16,22 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js'
   },
+
+  // Map compiled code to source
+  devtool: 'source-maps',
+
   module: {
     loaders: [
+      // Sass and css integration
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      { test: /\.css$/, use: ['style-loader','css-loader'] },
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
     ]

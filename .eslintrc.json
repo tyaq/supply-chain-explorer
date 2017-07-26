@@ -1,0 +1,16 @@
+{
+    "extends": "airbnb",
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
+    "rules": {
+        "react/prefer-stateless-function": "off",
+        "jsx-a11y/href-no-hash": "off",
+        "react/jsx-indent": ["error", 4],
+        "max-len": "off",
+        "indent" : ["error", 4],
+        "react/jsx-indent-props": "off"
+    }
+}
